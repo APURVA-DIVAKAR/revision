@@ -1,0 +1,8 @@
+.strikeThrough{
+  text-decoration: line-through;
+}
+
+button,input,li {
+  margin: 20px;
+  padding : 20ox;
+}
