@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import ToDo from './Components/ToDo'
 import Accordian from './Components/Accordian'
+import Chips from './Components/Chips'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,7 +33,8 @@ function App() {
   return (
     <>
       {/* <ToDo/> */}
-      <Accordian data = {data}/>
+      {/* <Accordian data = {data}/> */}
+      <Chips/>
       
     </>
   )
