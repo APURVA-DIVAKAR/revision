@@ -63,8 +63,33 @@ const getArgs = () =>{
     console.log(arg);
 }
 
-getArgs();
+// getArgs();
 // node index.js hello User
+
+// 6. Write a function that takes an array of numbers as input and returns a Promise which resolves with the sum of all the numbers in the array
+
+const sumArray = (arr) => {
+    let p = new Promise((res,rej)=>{
+        let sum = arr.reduce((acc,curr)=> acc+=curr);
+        res(sum);
+        // rej(sum==10 ? "Sum is 10" : "Not working")
+    })
+    return p
+} 
+
+// sumArray([-2,4,6,2]).then(data=>console.log(data)).catch(err=>console.log(err))
+
+// 7. Write a function that takes an array of Promises as input and returns a Promise which resolves with an array of resolved values from the input Promises
+
+const resolvePromises = (p) =>{
+    return Promise.all(p);
+}
+
+let p1 = Promise.resolve(1);
+let p2 = Promise.resolve(5);
+let p4 = Promise.resolve(4);
+
+resolvePromises([p1,p2,p4]).then(data=>console.log(data)).catch(err=>console.log(err))
 
 
 
